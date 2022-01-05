@@ -1,0 +1,15 @@
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\bin\Debug\net5.0\VisitorSystem.Shared.deps.json
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\bin\Debug\net5.0\VisitorSystem.Shared.dll
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\bin\Debug\net5.0\ref\VisitorSystem.Shared.dll
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\bin\Debug\net5.0\VisitorSystem.Shared.pdb
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.csproj.AssemblyReference.cache
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.AssemblyInfoInputs.cache
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.AssemblyInfo.cs
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.dll
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\ref\VisitorSystem.Shared.dll
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.pdb
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\bin\Debug\net5.0\VisitorSystem.Shared.runtimeconfig.json
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\bin\Debug\net5.0\VisitorSystem.Shared.runtimeconfig.dev.json
+C:\Users\pc\source\repos\VisitorSystem\VisitorSystem.Shared\obj\Debug\net5.0\VisitorSystem.Shared.genruntimeconfig.cache

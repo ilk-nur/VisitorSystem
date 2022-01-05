@@ -1,0 +1,94 @@
+﻿@using VisitorSystem.Shared.Utilities.Results.ComplexTypes
+@model VisitorSystem.Entities.Dtos.DepartmentDto.DepartmentListDto
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Birimler Index";
+}
+@if (Model.ResultStatus == ResultStatus.Success)
+{
+
+
+    <div id="modalPlaceHolder" aria-hidden="true"></div>
+
+    <div class="card mb-4 m-2">
+        <div class="card-header">
+            <i class="fas fa-table mr-1"></i>
+            Birimler
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="departmentsTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Birim Adı</th>
+                            <th>İletişim No</th>
+                            <th>Aktif Mi?</th>
+                            <th>Silindi Mi?</th>
+                            <th>Oluşturan Kullanıcı</th>
+                            <th>Oluşturulma Tarihi</th>
+                            <th>Son Düzenleyen Kullanıcı</th>
+                            <th>Son Düzenlenme Tarihi</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Birim Adı</th>
+                            <th>İletişim No</th>
+                            <th>Aktif Mi?</th>
+                            <th>Silindi Mi?</th>
+                            <th>Oluşturan Kullanıcı</th>
+                            <th>Oluşturulma Tarihi</th>
+                            <th>Son Düzenleyen Kullanıcı</th>
+                            <th>Son Düzenlenme Tarihi</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var department in Model.Departments)
+                        {
+                            <tr name="@department.Id">
+                                <td>@department.Id</td>
+                                <td>@department.Name</td>
+                                <td>@department.CountactNo</td>
+                                <td>@department.IsActive</td>
+                                <td>@department.IsDeleted</td>
+                                <td>@department.CreatedByName</td>
+                                <td>@department.CreatedDate.ToShortDateString()</td>
+                                <td>@department.ModifiedByName</td>
+                                <td>@department.ModifiedDate.ToShortDateString()</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm btn-block btn-update" data-id="@department.Id"><span class="fas fa-edit"></span></button>
+                                    <button class="btn btn-danger  btn-sm btn-block btn-delete" data-id="@department.Id"><span class="fas fa-minus-circle"></span></button>
+                                </td>
+
+
+                            </tr>
+
+
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+@if (Model.ResultStatus == ResultStatus.Error)
+{
+    <div class="alert alert-danger m-2">
+        @Model.Message<br />
+        Dashboard sayfasına dönmek için lütfen <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index"> tıklayınız.</a>
+
+    </div>
+
+}
+@section Scripts
+{
+
+    <script src="~/js/departmentIndex.js" type="application/ecmascript"></script>
+}

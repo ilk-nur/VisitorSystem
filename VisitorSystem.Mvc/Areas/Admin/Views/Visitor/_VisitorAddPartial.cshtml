@@ -1,0 +1,68 @@
+﻿@model VisitorSystem.Entities.Dtos.VisitorDto.VisitorAddDto
+@{
+    Layout = null;
+}
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><span class="fas fa-plus"></span> Ziyaretçi Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="İptal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
+        <div asp-validation-summary="All" id="validation_summery" aria-hidden="true" style="display:none;"></div>
+        <form  asp-area="Admin" asp-controller="Visitor" asp-action="Add" id="form-visitor-add">
+            <div class="form-group">
+                <label asp-for="TcNo"></label>
+                <input class="form-control" asp-for="TcNo" />
+                <span class="text-danger" asp-validation-for="TcNo"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input  class="form-control" asp-for="FirstName" />
+                <span class="text-danger" asp-validation-for="FirstName"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input  class="form-control" asp-for="LastName" />
+                <span class="text-danger" asp-validation-for="LastName"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate"></label>
+                <input type="date" class="form-control" asp-for="BirthDate" />
+                <span class="text-danger" asp-validation-for="BirthDate"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ContactNo"></label>
+                <input  class="form-control" asp-for="ContactNo" />
+                <span class="text-danger" asp-validation-for="ContactNo"></span>
+
+            </div>
+            
+            <div class="form-group">
+                <label for="departmentList" asp-for="DepartmentId"></label>
+                <select id="departmentList" asp-for="DepartmentId" asp-items="@(new SelectList(Model.Departments,"Id","Name"))">
+                    <option></option>
+
+                </select>
+                <span class="text-danger" asp-validation-for="DepartmentId"></span>
+
+            </div>
+        </form>
+             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-block" data-dismiss="modal"><span class="fas fa-times"></span> İptal</button>
+                <button type="button" class="btn btn-primary btn-block" id="btnSave" ><span class="fas fa-save"></span> Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
